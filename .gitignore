@@ -28,6 +28,3 @@ dist/
 .env
 .env.*
 !.env.example
-
-.claude/
-.PROMPTS.md/
