@@ -1,0 +1,38 @@
+.listing-page__body {
+  width: min(var(--content-max-width), calc(100% - 48px));
+  margin: 0 auto;
+  padding: 0 0 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 80px;
+}
+.listing-page__main { min-width: 0; }
+
+.listing-page__toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  background: rgba(34, 34, 34, 0.92);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .listing-page__body {
+    grid-template-columns: 1fr;
+    width: calc(100% - 48px);
+    padding-bottom: 60px;
+  }
+  .booking-widget__sticky {
+    position: static;
+    margin-top: 32px;
+  }
+}

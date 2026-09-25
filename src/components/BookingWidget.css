@@ -1,0 +1,176 @@
+/* Outer grid item: stretched to the same height as the main content
+   column (see ListingPage.css — grid rows default to align-items:
+   stretch), so the inner sticky card has room to travel and a real
+   bottom boundary to stop at instead of scrolling past the page. */
+.booking-widget {
+  min-width: 0;
+}
+
+.booking-widget__sticky {
+  position: sticky;
+  top: 60px;
+}
+
+.booking-widget__promo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+  background: #f7f7f7;
+  padding: 12px 18px 12px 14px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  min-height: 78px;
+}
+
+.booking-widget__promo-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: #2b8a5d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+.booking-widget__promo p {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.25;
+  margin: 0;
+  color: #1f1f1f;
+}
+
+.booking-widget__promo > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-widget__promo .link-btn {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #1f1f1f;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.btn--outline-sm {
+  border: 1px solid #d7d7d7;
+  background: #f5f5f5;
+  color: #1f1f1f;
+  border-radius: 16px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 106px;
+}
+
+.booking-widget__card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+  padding: 24px;
+}
+
+.booking-widget__price {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.booking-widget__price-amount {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.booking-widget__dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--color-border);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.booking-widget__date {
+  padding: 10px 14px;
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.booking-widget__date:last-child { border-right: none; }
+
+.booking-widget__date label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.booking-widget__date span {
+  font-size: 14px;
+}
+
+.booking-widget__guests {
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-widget__guests label {
+  font-size: 10px;
+  font-weight: 700;
+  display: block;
+}
+
+.booking-widget__guests span {
+  font-size: 14px;
+}
+
+.booking-widget__chevron {
+  transform: rotate(90deg);
+  color: var(--color-text-secondary);
+}
+
+.booking-widget__cancellation {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.booking-widget__cancellation strong {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.booking-widget__note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-top: 12px;
+}
+
+.booking-widget__report {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px auto 0;
+  background: none;
+  border: none;
+  font-size: 13px;
+  text-decoration: underline;
+  color: var(--color-text);
+}

@@ -1,0 +1,106 @@
+.location-map {
+  width: min(var(--content-max-width), calc(100% - 48px));
+  margin: 0 auto;
+  padding: 52px 0 48px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.location-map h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.location-map__city {
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+.location-map__canvas {
+  position: relative;
+  height: 375px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.location-map__svg { width: 100%; height: 100%; display: block; }
+
+.location-map__search {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 51px;
+  height: 51px;
+  border: 0;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 9px rgba(0,0,0,.15);
+}
+
+.location-map__pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 72px;
+  height: 72px;
+  background: #222;
+  color: white;
+  border-radius: 50%;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,.25);
+}
+.location-map__pin svg { width: 38px; height: 38px; }
+.location-map__zoom {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.location-map__zoom button {
+  width: 51px;
+  height: 51px;
+  border: 0;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 9px rgba(0,0,0,.15);
+  font-size: 22px;
+}
+.location-map__zoom button svg { width: 19px; height: 19px; }
+.location-map__note {
+  font-size: 15px;
+  margin-bottom: 42px;
+}
+.location-map__neighbourhood { padding-top: 0; }
+.location-map__neighbourhood h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.location-map__neighbourhood p {
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 1050px;
+}
+.location-map__clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.location-map .show-more-btn {
+  margin-top: 14px;
+  font-size: 15px;
+}
+@media (max-width: 900px) {
+  .location-map { width: calc(100% - 48px); }
+  .location-map__canvas { height: 300px; }
+}
